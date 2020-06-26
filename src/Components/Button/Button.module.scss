@@ -1,0 +1,93 @@
+@import '../../scss/main.scss';
+
+.Button{
+border: none;
+    color: $color-white;
+    outline: none;
+  
+    border-radius: .2rem;
+    cursor: pointer;
+    font: inherit;
+   padding: 1rem;
+ 
+  display: inline-block;
+
+
+&:focus, &:active, &:visited{
+    outline: none;
+    border: none;
+}
+    &:disabled{
+background-color: $color-darkGrey;
+
+    cursor: not-allowed;
+    color: $color-grey;
+    &:hover{
+        background-color: $color-darkGrey !important;
+        color: $color-grey !important;
+      cursor: not-allowed;
+    }
+    }
+}
+.hide{
+    display: none;
+}
+.disabled{
+    background-color: $color-red !important;
+
+    cursor: not-allowed;
+    color: $color-grey;
+    &:hover{
+    
+        color: $color-grey !important;
+        cursor: not-allowed;
+    }
+}
+
+.margin{
+    margin: 1rem 0;
+}
+
+.lg{
+ font-size: 4rem;
+}
+.md{
+
+ font-size: 3rem;
+}
+.primary{
+    background-color: $color-primary;
+    &:hover{
+       opacity: 0.8;
+    }
+}
+.primaryOutline{
+    background-color: transparent;
+    color: $color-primary;
+    @include border(.1rem, $color-primary)
+    &:hover{
+        opacity: 0.8;
+    }
+}
+.secondary{
+    background-color: $color-orange;
+    &:hover{
+        opacity: .8;
+    }
+}
+.danger{
+    background-color: $color-red;
+    &:hover{
+        opacity: .8;
+    }
+}
+.block{
+width: 100%;
+}
+.rounded{
+    border-radius: 2rem;
+}
+.boxShadow{
+  @include boxShadow(.2rem, .3rem, $color-grey);
+}
+

@@ -1,0 +1,113 @@
+@mixin boxShadow($verticalSize, $blurSize, $color){
+    box-shadow: 0 $verticalSize $blurSize 0 $color;
+}
+@mixin border($size,$color) {
+border: $size solid $color ;
+}
+@mixin borderBottom($size,$color) {
+border-bottom: $size solid $color ;
+}
+@mixin twoCol{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+   
+}
+@mixin headerLeft{
+    font-weight: bolder;
+    text-align: start;
+    padding: .5rem 0;
+    text-transform: uppercase;
+}
+@mixin headerRight{
+    font-weight: bolder;
+    text-align: right;
+      padding: .5rem 0;
+    text-transform: uppercase;
+}
+@mixin headerCentre{
+    font-weight: bolder;
+    text-align: center;
+      padding: .5rem 0;
+    text-transform: uppercase;
+}
+@mixin linkText{
+    color: $color-blue;
+    cursor: pointer;
+    &:hover{
+opacity: .8;
+    }
+}
+
+p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    list-style: none;
+   
+
+    &:hover{
+   
+         text-decoration: none;
+     
+    } 
+}
+@mixin noDecoration{
+ text-decoration: none;
+    list-style: none;
+    color: $color-white;
+
+    &:hover{
+        color: $color-white;
+         text-decoration: none;
+         opacity: .8;
+    }
+}
+
+@mixin respond($breakpoint){
+    @if $breakpoint == 'phone' {
+ @media (max-width: $phone){
+@content;
+    }
+    }
+     @if $breakpoint == 'minPhone' {
+ @media (min-width: $phone){
+@content;
+    }
+    }
+     @else if $breakpoint == 'tablet' {
+ @media (max-width: $tablet){
+@content;
+    }
+    }
+    @else if $breakpoint == 'minTablet' {
+ @media (min-width: $tablet){
+@content;
+    }
+    }
+
+     @else if $breakpoint == 'largeTablet' {
+ @media (max-width: $largeTablet){
+@content;
+    }
+    }
+      @else if $breakpoint == 'minLargeTablet' {
+ @media (min-width: $largeTablet){
+@content;
+    }
+    }
+ 
+    @else if $breakpoint == 'desktop' {
+ @media (min-width: $desktop){
+@content;
+    }
+    }
+   
+}
+
+.row{
+    margin: auto 0 !important
+}

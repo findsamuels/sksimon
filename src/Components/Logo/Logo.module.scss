@@ -1,0 +1,16 @@
+@import '../../scss/main.scss';
+
+.Logo{
+    font-weight: bold;
+    text-transform: uppercase;
+
+   animation: all .5s ease-in-out;
+    text-decoration: none;
+    color: $color-white;
+    font-size: 2rem;
+@include noDecoration;
+}
+
+.lg{
+    font-size: 5rem;
+}

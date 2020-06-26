@@ -1,0 +1,21 @@
+
+html{
+  font-size: 62.5%;
+   scroll-behavior: smooth;
+}
+
+
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+ font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

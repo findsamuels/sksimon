@@ -1,0 +1,86 @@
+@import '../../scss/main.scss';
+
+.ControlComponent{
+    
+    @include twoCol;
+@include respond(phone){
+    justify-content: flex-end;
+}
+}
+.controlContainer{
+    padding: 0 1rem;
+    cursor: pointer;
+    color: $color-darkGrey;
+}
+.cartContainer{
+   padding: 0 2rem;
+    @include twoCol;
+}
+
+.cartAmount{
+    padding-left: .5rem;
+    margin-top: 2rem;
+   color: $color-darkGrey;
+    font-size: 1.2rem;
+}
+
+.NoItem{
+    color: $color-red;
+}
+
+.ItemInCart{
+    color: $color-green;
+}
+
+.loggedInText{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+@include respond(phone){
+    width: 100%;
+       text-align: end;
+       display: block;
+}
+    p{
+        @include respond(phone){
+ padding: .5rem 0;
+        }
+       
+    }
+    button{
+         @include respond(phone){
+ margin: .5rem 0;
+        }
+    }
+}
+
+.logoutButton{
+
+    color: $color-white;
+    cursor: pointer;
+   
+
+    &:hover{
+   
+        opacity: 0.8
+    }
+    @include respond(phone){
+position: absolute;
+    top: 90%;
+    left: 60%;
+    transform: (translate(-90%, -60%));
+    padding: 0;
+    color: $color-darkGrey;
+    padding: 1rem;
+    font-weight: bold;
+     @include boxShadow(.2rem, .3rem, $color-grey);
+     &:hover{
+     
+        @include boxShadow(.1rem, .3rem, $color-grey);
+    }
+    }
+    
+}

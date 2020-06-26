@@ -1,0 +1,83 @@
+@import '../../scss/main.scss';
+
+.Cart{
+    margin: auto;
+    padding: 1rem;
+    width: 100%;
+    display: inline-block;
+    @include borderBottom(.1rem, $color-grey);
+
+    img{
+width: 100%;
+height: auto;
+    }
+    h4{
+font-weight: bold;
+    }
+   
+}
+.itemTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include borderBottom(.1rem, $color-grey);
+    margin-bottom: .5rem;
+
+}
+.ItemRow{
+text-align: center;
+align-items: flex-start;
+justify-content: start;
+
+p{
+    font-size: 1.2rem;
+    text-align: start;
+}
+}
+.itemValue{
+    font-weight: bold;
+}
+.descContainer{
+
+}
+
+.cartImgContainer{
+
+}
+
+.headerCentre{
+     @include headerCentre
+}
+
+.TotalPriceContainer{
+
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+ margin: 1rem auto;
+
+    h2{
+font-weight: lighter;
+    }
+    p{
+        color: $color-primary;
+        margin: 0 auto;
+    }
+}
+
+.qtyControlBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @include boxShadow(.1rem, .2rem, $color-grey);
+    padding: .5rem
+
+}
+
+.cartLink{
+   @include noDecoration
+}
+
+.removeItem{
+    padding: 1rem 0;
+}
